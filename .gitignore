@@ -1,0 +1,14 @@
+# Java class files
+*.class
+
+# VS Code internals
+.vscode/
+
+# Project metadata
+.project
+.classpath
+.settings/
+
+# OS specific files
+.DS_Store
+Thumbs.db
