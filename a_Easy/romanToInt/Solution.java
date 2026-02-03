@@ -1,3 +1,4 @@
+package a_Easy.romanToInt;
 public class Solution {
    public int romanToInt(String s) {
       int len = s.length();
@@ -27,10 +28,5 @@ public class Solution {
          val2=val1;
       }
    return tot;    
-   }
-
-   public static void main(String[] args) {
-      Solution solution = new Solution();
-      System.out.println(solution.romanToInt("XIV"));
    }
 }
