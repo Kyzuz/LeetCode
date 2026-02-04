@@ -1,0 +1,20 @@
+Ma version ne bat que 5% des répondants...
+
+Une solution plus rapide O(n) serait le scanning horizontal. On vérifie quel est le préfixe le plus court en le premier mot 
+et le deuxième, puis on passe au prochain couple de donnée.
+
+class Solution {
+   public String longestCommonPrefix(String[] strs) {
+      if (strs.length == 0) return "";
+      String prefix = strs[0];
+
+      // La magie opère ici, tant que le préfixe n'est pas équivalent à 0, on décrémente la taille
+      // du préfixe. Ainsi, on détermine quel est la taille du plus petit préfixe.
+      for (int i = 1; i < strs.length; i++) while (strs[i].indexOf(prefix) != 0) {
+
+         prefix = prefix.substring(0, prefix.length() - 1);
+         if (prefix.isEmpty()) return "";
+      }
+      return prefix;
+   }
+}
